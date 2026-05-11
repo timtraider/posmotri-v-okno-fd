@@ -85,7 +85,7 @@ ol {
 
 .result__video-container {
   position: relative;
-  width: 710px;
+  width: 708px;
   height: 386px;
   margin-bottom: 20px;
 }
@@ -182,9 +182,6 @@ button:hover {
   font-size: 30px;
   font-weight: bold;
   line-height: 120%;
-}
-
-h2.content__video-card-title {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -222,6 +219,11 @@ h2.content__video-card-title {
   outline: 1px solid #fff;
 }
 
+.search-form__submit-button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
 /* секция форм */
 
 .search-form {
@@ -232,7 +234,8 @@ h2.content__video-card-title {
 
 .search-form__label {
   display: flex;
-  gap: 5px;
+  gap: 10px;
+  align-items: center;
 }
 
 .search-form__label-text {
@@ -240,13 +243,16 @@ h2.content__video-card-title {
 }
 
 .search-form__label:has(:focus-visible) {
-  border: 1px solid #fff;
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .search-form__fieldset {
-  display: grid;
+  display: flex;
   border: none;
   gap: 5px;
+  flex-direction: column;
+  align-self: flex-start;
 }
 
 .search-form__fieldset-title {
@@ -256,7 +262,7 @@ h2.content__video-card-title {
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 15px;
+  gap: 10px;
 }
 
 .search-form__submit-button {
@@ -271,7 +277,7 @@ h2.content__video-card-title {
 
 .content__video-card-description-container:hover {
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 1px;
   text-decoration-thickness: 1px;
 }
 
@@ -285,7 +291,6 @@ h2.content__video-card-title {
   background: transparent;
   font-size: 18px;
   font-weight: normal;
-  letter-spacing: -1px;
 }
 
 .search-form__textfield::placeholder {
@@ -293,8 +298,7 @@ h2.content__video-card-title {
 }
 
 .search-form__textfield:focus {
-  outline: 1px solid #fff;
-  outline-offset: 3px;
+  outline: none;
 }
 
 .not-decorated-search-form:hover {
